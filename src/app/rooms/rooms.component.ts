@@ -26,7 +26,8 @@ export class RoomsComponent {
     price: 500,
     photos: 'images.com/123123',
     checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023')
+    checkoutTime: new Date('30-Sep-2023'),
+    rating : 4.5
   },
   {
     roomNumber: 2,
@@ -35,7 +36,8 @@ export class RoomsComponent {
     price: 200,
     photos: 'images.com/321321',
     checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023')
+    checkoutTime: new Date('30-Sep-2023'),
+    rating: 3.5
   },
   {
     roomNumber: 3,
@@ -44,7 +46,8 @@ export class RoomsComponent {
     price: 1000,
     photos: 'images.com/123123123',
     checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023')
+    checkoutTime: new Date('30-Sep-2023'),
+    rating: 5
   },
 ]
 
