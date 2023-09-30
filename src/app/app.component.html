@@ -1,2 +1,14 @@
 <h1>Hello World!</h1>
-<hinv-rooms></hinv-rooms>
+
+<div [ngSwitch]="role">
+    <div *ngSwitchCase="'User'">
+        Welcome, User!
+    </div>
+    <div *ngSwitchCase="'Admin'">
+        Hello, Admin
+        <hinv-rooms></hinv-rooms>
+    </div>
+    <div *ngSwitchDefault>
+        You're not allowed to see this Webpage!
+    </div>
+</div>
