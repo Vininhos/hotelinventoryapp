@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
@@ -6,7 +6,42 @@ import { Room, RoomList } from './rooms';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent {
+export class RoomsComponent implements OnInit{
+
+  ngOnInit(): void {
+    this. roomList = [{
+      roomNumber: 1,
+      roomType: 'Deluxe Room',
+      amenities: 'Air Conditioner',
+      price: 500,
+      photos: 'images.com/123123',
+      checkinTime: new Date('29-Sep-2023'),
+      checkoutTime: new Date('30-Sep-2023'),
+      rating : 4.5
+    },
+    {
+      roomNumber: 2,
+      roomType: 'Normal Room',
+      amenities: 'TV',
+      price: 200,
+      photos: 'images.com/321321',
+      checkinTime: new Date('29-Sep-2023'),
+      checkoutTime: new Date('30-Sep-2023'),
+      rating: 3.5
+    },
+    {
+      roomNumber: 3,
+      roomType: 'Private Suite',
+      amenities: 'Everything special',
+      price: 1000,
+      photos: 'images.com/123123123',
+      checkinTime: new Date('29-Sep-2023'),
+      checkoutTime: new Date('30-Sep-2023'),
+      rating: 5
+    },
+  ]
+  }
+
   hotelName = 'Hilton';
 
   numberOfRooms = 10;
@@ -19,37 +54,7 @@ export class RoomsComponent {
     bookedRooms: 5
   };
 
-  roomList: RoomList[] = [{
-    roomNumber: 1,
-    roomType: 'Deluxe Room',
-    amenities: 'Air Conditioner',
-    price: 500,
-    photos: 'images.com/123123',
-    checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023'),
-    rating : 4.5
-  },
-  {
-    roomNumber: 2,
-    roomType: 'Normal Room',
-    amenities: 'TV',
-    price: 200,
-    photos: 'images.com/321321',
-    checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023'),
-    rating: 3.5
-  },
-  {
-    roomNumber: 3,
-    roomType: 'Private Suite',
-    amenities: 'Everything special',
-    price: 1000,
-    photos: 'images.com/123123123',
-    checkinTime: new Date('29-Sep-2023'),
-    checkoutTime: new Date('30-Sep-2023'),
-    rating: 5
-  },
-]
+  roomList: RoomList[] = [];
 
   toggle() {
     this.hideRooms = !this.hideRooms;
